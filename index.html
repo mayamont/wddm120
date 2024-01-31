@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music World</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Explore the Music World</h1>
+    </header>
+    <nav>
+        <a onclick="showSection('About')">About</a>
+        <a onclick="showSection('Genres')">Genres</a>
+        <a onclick="showSection('Artists')">Artists</a>
+        <a onclick="showSection('Songs')">Songs</a>
+    </nav>
+    <main>
+        <section id="sectionAbout">
+            <h2 id="aboutTitle">About</h2>
+            <p id="aboutContent">
+                The history of music is an intricate journey through time, weaving together the evolution of diverse sounds, styles, and cultural expressions. From its early roots in prehistoric vocalizations and rudimentary instruments to the intricate compositions of classical and contemporary genres, music has been an integral part of the human experience.<br><br>
+            
+                In ancient times, music served as a medium for communication, expression, and ritual. As societies evolved, the medieval period introduced musical notation, paving the way for the preservation and transmission of compositions. The Renaissance saw the rise of polyphony and increased accessibility to music through advancements in notation and printing.<br><br>
+            
+                The Baroque era brought forth ornamentation, contrast, and heightened emotion, while the Classical period emphasized clarity and balance in musical structure. The Romantic period of the 19th century marked a shift towards intense emotion and individual expression, reflecting the cultural ideals of the time.<br><br>
+            
+                The 20th century witnessed the emergence of diverse musical styles, from the improvisation of jazz to the rebellious spirit of rock and the electronic landscapes of the avant-garde. Music became a powerful tool for social and political movements, reflecting and influencing the changing times.<br><br>
+            
+                The importance of music is profound and multi-faceted. Culturally, it serves as a vital form of expression, reflecting the beliefs, values, and traditions of societies. Emotionally, music has the power to evoke a wide range of feelings and is often used therapeutically to enhance well-being. Socially, it fosters cohesion and community bonding, playing a central role in ceremonies, celebrations, and communal events.<br><br>
+            
+                Moreover, music is a driver of innovation and creativity, with artists continually pushing boundaries and challenging conventions. It serves as a universal language, transcending barriers and communicating complex emotions and messages.<br><br>
+            
+                In essence, the history of music is a testament to its enduring significance in shaping and reflecting human experiences. Its importance extends far beyond entertainment, influencing culture, emotions, and societal connections throughout the ages.<br><br>
+            
+                <b>Here you can discover the diversity of music genres, artists, songs, and their unique characteristics!</b>
+            </p>
+            
+            
+        </section>
+        <section id="sectionGenres" style="display: none;">
+            <h2 id="genreTitle" >Popular Genres</h2>
+            <p id="genreContent"></p>
+        </section>
+        <section id="sectionArtists" style="display: none;">
+            <h2 id="artistTitle">Featured Artists</h2>
+            <p id="artistsContent"></p>
+        </section>
+        <section id="sectionSongs" style="display: none;">
+            <h2 id="SongTitle">Top Songs</h2>
+            <p id="SongsContent"></p>
+        </section>
+        <aside>
+            <h2>Music Genres</h2>
+            <ul id="sidebarList">
+                <li onclick="changeGenre('Rock')">Rock</li>
+                <li onclick="changeGenre('Pop')">Pop</li>
+                <li onclick="changeGenre('Hip Hop')">Hip Hop</li>
+            </ul>
+            <button onclick="toggleColorScheme()">Toggle Dark/Light Theme</button>
+            <label for="newItem">Add New Genre:</label>
+            <input type="text" id="newItem" placeholder="Enter genre">
+            <button onclick="addGenre()">Add Genre</button>
+            <label for="removeItem">Remove Genre:</label>
+            <select id="removeItem">
+                <option value="Rock">Rock</option>
+                <option value="Pop">Pop</option>
+                <option value="Hip Hop">Hip Hop</option>
+            </select>
+            <button onclick="removeGenre()">Remove Genre</button>
+            <label for="genreDescription">Genre Description:</label>
+            <textarea id="genreDescription" placeholder="Write a description for the selected genre"></textarea>
+            <button onclick="updateGenreDescription()">Update Description</button>
+        </aside>
+    </main>
+    <footer>
+        Mayara Monteiro da Silva - 2024 
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
